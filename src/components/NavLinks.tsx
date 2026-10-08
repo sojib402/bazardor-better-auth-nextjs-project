@@ -1,4 +1,4 @@
-import React from 'react';
+"use cache";
 import Link from 'next/link';
 interface Category{
     id:string,
@@ -9,7 +9,7 @@ interface Category{
 const NavLinks = async() => {
     const res=await fetch('https://api.api-store.workers.dev/api/bazardor/categories')
     const data:Category[]=await res.json()
-    console.log(data)
+    // console.log(data)
     return (
         <div className='flex gap-6 mt-6 mx-5'>
             {

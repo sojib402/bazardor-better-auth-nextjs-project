@@ -1,11 +1,11 @@
-'use client'
+
 import Image from 'next/image';
 import NavLinks from './NavLinks';
+import Marquee from './Marquee';
+import DateDisplay from './DateDisplay';
 const Header = () => {
-    const date = new Date().toLocaleDateString("bn-BD", {
-        dateStyle: 'full'
-    })
-    console.log(date)
+    
+    // console.log(date)
     return (
        <div className='container'>
         <div className='w-full flex justify-between mt-5'>
@@ -15,7 +15,7 @@ const Header = () => {
                 </div>
                 <div className='flex flex-col'>
                     <h2 className='text-2xl font-bold'>বাজার দর</h2>
-                    <p>{date}</p>
+                    <DateDisplay/>
                 </div>
             </div>
             <div className='flex gap-5'>
@@ -25,6 +25,7 @@ const Header = () => {
             
         </div>
         <NavLinks/>
+        <Marquee/>
     </div>
         
         
