@@ -1,13 +1,13 @@
 
-import AllProducts from "./AllProducts";
+import AllProducts, { Product } from "./AllProducts";
 
-type Product = {
-  id: number;
-  change: {
-    dir: "up" | "down" | "flat";
-    pct: number;
-  };
-};
+// type Product = {
+//   id: number;
+//   change: {
+//     dir: "up" | "down" | "flat";
+//     pct: number;
+//   };
+// };
 
 type IncreaseProps = {
   products: Product[];

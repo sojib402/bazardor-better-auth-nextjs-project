@@ -6,13 +6,44 @@ import AllProducts from "@/components/AllProducts";
 import Increase from "@/components/Increase";
 import Decrease from "@/components/Decrease";
 import NavLinks from "@/components/NavLinks";
-type Product = {
+// type Product = {
+//   id: number;
+//   change: {
+//     dir: "up" | "down" | "flat";
+//     pct: number;
+//   };
+// };
+// type PageProps = {
+//   products: Product[];
+// };
+export type Market = {
+  market: string;
+  division: string;
+  min: number;
+  max: number;
+};
+
+export type Product = {
   id: number;
+  slug: string;
+  nameBn: string;
+  category: string;
+  categoryNameBn: string;
+  categoryIcon: string;
+  unit: string;
+  image: string;
+  today: number;
+  yesterday: number;
+  lastWeek: number;
+  lastMonth: number;
   change: {
     dir: "up" | "down" | "flat";
     pct: number;
   };
+  markets: Market[];
 };
+export const instant = false;
+export type Products = Product[];
 export default async function Home() {
   const res = await fetch('https://api.abcz.workers.dev/api/bazardor/products')
   const data:Product[] = await res.json()

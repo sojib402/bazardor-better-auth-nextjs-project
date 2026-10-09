@@ -25,7 +25,7 @@ type Product = {
   };
   markets: Market[];
 };
-
+export const instant = false;
 const NewsDetails = async ({
   params,
 }: {

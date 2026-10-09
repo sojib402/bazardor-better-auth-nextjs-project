@@ -1,14 +1,14 @@
 import React from 'react';
-import AllProducts from './AllProducts';
-type Product={
-    id:number;
-    change:{
-        dir:'up'|'down'|'flat';
-        pct:number;
-    };
-};
+import AllProducts, { Product } from './AllProducts';
+// type Product={
+//     id:number;
+//     change:{
+//         dir:'up'|'down'|'flat';
+//         pct:number;
+//     };
+// };
 type DecreaseProps={
-    products:Product[];
+    products: Product[];
 }
 
 const Decrease = ({products}:DecreaseProps) => {

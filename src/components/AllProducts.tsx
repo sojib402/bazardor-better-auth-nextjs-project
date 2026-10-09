@@ -1,7 +1,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-type Product = {
+ export type Product = {
+  id: number;
   image: string;
   nameBn: string;
   unit: string;
