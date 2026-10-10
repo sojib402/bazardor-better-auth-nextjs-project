@@ -1,43 +1,57 @@
 
 "use client";
-
+import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
 
 const SignUpPage = () => {
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.SubmitEvent<HTMLElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
 
-    const user = Object.fromEntries(formData.entries());
+    const user = Object.fromEntries(formData.entries()) as {name:string,email:string,password:string,confirmPassword:string};
     console.log(user)
      if (user.password !== user.confirmPassword) {
       toast.error("পাসওয়ার্ড দুটি মিলছে না");
       return;
     }
     const {data,error}=await authClient.signUp.email({
-        // ...user,
+        
          name:user.name,
          email:user.email,
          password:user.password,
         callbackURL:'/'
     });
     if(data){
+      toast.success('signUp successfully')
         console.log(data);
         redirect('/');
+        
     }
     if(error){
         console.log(error);
+        toast.error('signUp Failure.try again')
     }
 
    
 
     // console.log(user);
   };
-
+const handleGoogleSignIn=async ()=>{
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data)
+ }
+ const handleGithubSignIn=async ()=>{
+  const data = await authClient.signIn.social({
+    provider: "github",
+  });
+  
+ }
   return (
     <div className="min-h-screen bg-[#f0f5f0] px-4 py-10">
       <h1 className="text-center text-2xl font-bold">
@@ -111,6 +125,7 @@ const SignUpPage = () => {
             </div>
 
             <button
+             onClick={handleGoogleSignIn}
               type="button"
               className="btn bg-transparent border-gray-200 w-full"
             >
@@ -118,11 +133,16 @@ const SignUpPage = () => {
             </button>
 
             <button
+            onClick={handleGithubSignIn}
               type="button"
               className="btn bg-transparent border-gray-200 w-full mt-2"
             >
               GitHub দিয়ে চালিয়ে যান
             </button>
+            <br/>
+            <Link href={'/signin'}>
+            <button className="btn bg-transparent border-gray-200 w-full mt-2">Sign In Page</button>
+            </Link>
           </fieldset>
         </form>
       </div>

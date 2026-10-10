@@ -3,6 +3,7 @@ import Image from 'next/image';
 import NavLinks from './NavLinks';
 import Marquee from './Marquee';
 import DateDisplay from './DateDisplay';
+import UserInfo from './UserInfo';
 const Header = () => {
     
     // console.log(date)
@@ -18,10 +19,7 @@ const Header = () => {
                     <DateDisplay/>
                 </div>
             </div>
-            <div className='flex gap-5'>
-                <button className='btn px-4'>সাইন ইন</button>
-                <button className='btn bg-[#05893E]  px-4 rounded-2xl'>সাইন আপ</button>
-            </div>
+            <UserInfo/>
             
         </div>
         <NavLinks/>
