@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1.Project Name: বাজার দর (BazarDor)
 
-## Getting Started
+2.BazarDor is a simple website that helps people check the daily prices of market products. Users can easily see the prices of vegetables, fruits, fish, meat, and other essential items.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3.Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js and BetterAuth
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+React
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TypeScript
 
-## Learn More
+Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+DaisyUI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4.Key Features
 
-## Deploy on Vercel
+Daily Market Prices: Users can check the prices of daily products.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Product Categories: Products are organized into different categories.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Price Comparison: Users can compare the prices of different products.
+
+Price Trends: Users can see whether product prices are increasing or decreasing.
+
+Responsive Design: The website works on desktop, tablet, and mobile devices.
+
+
+
+5.Project Goal
+
+The goal of BazarDor is to help people know market prices and make better shopping decisions.

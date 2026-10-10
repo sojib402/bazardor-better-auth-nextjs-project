@@ -38,7 +38,7 @@ const NewsDetails = async ({
 
   try {
     const res = await fetch(
-      `https://api.api-store.workers.dev/api/bazardor/products/${productId}`,
+      `https://openapi.programming-hero.com/api/bazardor/products/${productId}`,
       { cache: "no-store" }
     );
 

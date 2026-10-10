@@ -41,7 +41,7 @@ const CategoryNews = ({
     if (!categoryId) return;
 
     fetch(
-      `https://api.abcz.workers.dev/api/bazardor/products?category=${categoryId}`
+      `https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`
     )
       .then((res) => res.json())
       .then((result) => setData(result));
