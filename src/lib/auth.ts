@@ -5,6 +5,9 @@ import { mongodbAdapter } from "@better-auth/mongo-adapter";
 const client = new MongoClient(process.env.MONGODB_URL as string);
 const db=client.db("bazar-dar");
 export const auth = betterAuth({
+  trustedOrigins: [
+    "https://bazardor-better-auth-nextjs-project.vercel.app",
+  ],
      emailAndPassword: { 
     enabled: true, 
     autoSignIn:false
